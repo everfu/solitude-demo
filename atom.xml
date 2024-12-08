@@ -6,7 +6,7 @@
   <link href="https://everfu.github.io/solitude-demo/atom.xml" rel="self"/>
   
   <link href="https://everfu.github.io/solitude-demo/"/>
-  <updated>2024-11-11T02:00:00.000Z</updated>
+  <updated>2024-12-08T04:41:21.002Z</updated>
   <id>https://everfu.github.io/solitude-demo/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solitude修改豆瓣插件样式</title>
+    <link href="https://everfu.github.io/solitude-demo/posts/9840.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/9840.html</id>
+    <published>2024-12-08T04:41:21.002Z</published>
+    <updated>2024-12-08T04:41:21.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装插件&quot;&gt;安装插件&lt;/h2&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="使用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="豆瓣" scheme="https://everfu.github.io/solitude-demo/tags/%E8%B1%86%E7%93%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>为你的网站增加一个漂亮的今日热门侧边栏，让访客一眼看到今日最热内容</title>
