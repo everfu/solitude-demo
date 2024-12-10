@@ -103,11 +103,11 @@
 打开配置文件中开关</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">chart:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <div class="tabs" id="chart"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#chart-0">语法</button></li><li class="tab"><button type="button" data-href="#chart-1">参数</button></li><li class="tab"><button type="button" data-href="#chart-2">示例</button></li><li class="tab"><button type="button" data-href="#chart-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="chart-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-1"><p>不需要参数。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br><span class="line">&#123;% endchart %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-3"><div class="chart">
-    <canvas id="chart-bpujfz859"></canvas>
+    <canvas id="chart-y58hgl7l8"></canvas>
     <script>
     !function() {
       const chart = () => {
-        const canvas = document.getElementById("chart-bpujfz859");
+        const canvas = document.getElementById("chart-y58hgl7l8");
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
         new Chart(ctx, {type: 'bar',
@@ -210,13 +210,13 @@ options: {
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="typeit-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% typeit &#x27;div&#x27; &#125;</span><br><span class="line">waitUntilVisible: true,</span><br><span class="line">strings: &quot;Alex MacArthur&quot;,</span><br><span class="line">&#123;% endtypeit %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="typeit-3"><div class="typeit">
-    <div id="typeit-076gup54j"></div>
+    <div id="typeit-dapqo1puk"></div>
     <script>
     !function() {
       const typeit = () => {
-        const ctx = document.getElementById("typeit-076gup54j");
+        const ctx = document.getElementById("typeit-dapqo1puk");
         if (!ctx) return;
-        new TypeIt("#typeit-076gup54j", {waitUntilVisible: true,
+        new TypeIt("#typeit-dapqo1puk", {waitUntilVisible: true,
 strings: "Alex MacArthur"})
           .go();
       }
@@ -658,24 +658,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="githubrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% github &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="githubrepo-3"><div class="repo-card">
-  <a class='name-dje29sra8 repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-dje29sra8 repo-desc'></p>
+  <a class='name-aaikz1d2y repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-aaikz1d2y repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-dje29sra8'></span>
+    <span class='star-aaikz1d2y'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-dje29sra8'></span>
+    <span class='fork-aaikz1d2y'></span>
   </div>
-  <img class='lang-dje29sra8 repo-language no-lightbox' />
+  <img class='lang-aaikz1d2y repo-language no-lightbox' />
   <script>
     fetch('https://api.github.com/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-dje29sra8').innerText = data.name;
-        document.querySelector('.desc-dje29sra8').innerText = data.description;
-        document.querySelector('.star-dje29sra8').innerText = data.stargazers_count;
-        document.querySelector('.fork-dje29sra8').innerText = data.forks_count;
-        document.querySelector('.lang-dje29sra8').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-aaikz1d2y').innerText = data.name;
+        document.querySelector('.desc-aaikz1d2y').innerText = data.description;
+        document.querySelector('.star-aaikz1d2y').innerText = data.stargazers_count;
+        document.querySelector('.fork-aaikz1d2y').innerText = data.forks_count;
+        document.querySelector('.lang-aaikz1d2y').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -702,24 +702,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitearepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitea &#x27;https://git.fsfe.org&#x27; &#x27;FSFE/fsfe-website&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitearepo-3"><div class="repo-card">
-  <a class='name-eqfbjngeu repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
-  <p class='desc-eqfbjngeu repo-desc'></p>
+  <a class='name-o5t0d7rus repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
+  <p class='desc-o5t0d7rus repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-eqfbjngeu'></span>
+    <span class='star-o5t0d7rus'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-eqfbjngeu'></span>
+    <span class='fork-o5t0d7rus'></span>
   </div>
-  <img class='lang-eqfbjngeu repo-language no-lightbox' />
+  <img class='lang-o5t0d7rus repo-language no-lightbox' />
   <script>
     fetch('https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-eqfbjngeu').innerText = data.name;
-        document.querySelector('.desc-eqfbjngeu').innerText = data.description;
-        document.querySelector('.star-eqfbjngeu').innerText = data.stars_count;
-        document.querySelector('.fork-eqfbjngeu').innerText = data.forks_count;
-        document.querySelector('.lang-eqfbjngeu').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-o5t0d7rus').innerText = data.name;
+        document.querySelector('.desc-o5t0d7rus').innerText = data.description;
+        document.querySelector('.star-o5t0d7rus').innerText = data.stars_count;
+        document.querySelector('.fork-o5t0d7rus').innerText = data.forks_count;
+        document.querySelector('.lang-o5t0d7rus').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -741,24 +741,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="giteerepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitee &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="giteerepo-3"><div class="repo-card">
-  <a class='name-9q1642kl9 repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-9q1642kl9 repo-desc'></p>
+  <a class='name-3twvdx6hl repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-3twvdx6hl repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-9q1642kl9'></span>
+    <span class='star-3twvdx6hl'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-9q1642kl9'></span>
+    <span class='fork-3twvdx6hl'></span>
   </div>
-  <img class='lang-9q1642kl9 repo-language no-lightbox' />
+  <img class='lang-3twvdx6hl repo-language no-lightbox' />
   <script>
     fetch('https://gitee.com/api/v5/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-9q1642kl9').innerText = data.name;
-        document.querySelector('.desc-9q1642kl9').innerText = data.description;
-        document.querySelector('.star-9q1642kl9').innerText = data.stargazers_count;
-        document.querySelector('.fork-9q1642kl9').innerText = data.forks_count;
-        document.querySelector('.lang-9q1642kl9').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-3twvdx6hl').innerText = data.name;
+        document.querySelector('.desc-3twvdx6hl').innerText = data.description;
+        document.querySelector('.star-3twvdx6hl').innerText = data.stargazers_count;
+        document.querySelector('.fork-3twvdx6hl').innerText = data.forks_count;
+        document.querySelector('.lang-3twvdx6hl').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -780,24 +780,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitlabrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitlab &#x27;gitlab-org/gitlab&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitlabrepo-3"><div class="repo-card">
-  <a class='name-eqqonj320 repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
-  <p class='desc-eqqonj320 repo-desc'></p>
+  <a class='name-48lu7ezn6 repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
+  <p class='desc-48lu7ezn6 repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-eqqonj320'></span>
+    <span class='star-48lu7ezn6'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-eqqonj320'></span>
+    <span class='fork-48lu7ezn6'></span>
   </div>
-  <img class='lang-eqqonj320 repo-language no-lightbox' />
+  <img class='lang-48lu7ezn6 repo-language no-lightbox' />
   <script>
     fetch('https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-eqqonj320').innerText = data.name;
-        document.querySelector('.desc-eqqonj320').innerText = data.description;
-        document.querySelector('.star-eqqonj320').innerText = data.star_count;
-        document.querySelector('.fork-eqqonj320').innerText = data.forks_count;
-        document.querySelector('.lang-eqqonj320').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
+        document.querySelector('.name-48lu7ezn6').innerText = data.name;
+        document.querySelector('.desc-48lu7ezn6').innerText = data.description;
+        document.querySelector('.star-48lu7ezn6').innerText = data.star_count;
+        document.querySelector('.fork-48lu7ezn6').innerText = data.forks_count;
+        document.querySelector('.lang-48lu7ezn6').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -828,7 +828,7 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 <td>无</td>
 </tr>
 </tbody>
-</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="bubble-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% bubble &#x27;我是一段文字内容，这是我写的东西&#x27; &#x27;我是提示文字&#x27; &#x27;red&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="bubble-3"><p><span class="bubble-content">我是一段文字内容，这是我写的东西</span><span class="bubble-notation"><span class="bubble-item bg-blue">我是提示文字</span></span></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="bubble-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% bubble &#x27;我是一段文字内容，这是我写的东西&#x27; &#x27;我是提示文字&#x27; &#x27;red&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="bubble-3"><div class="bubble"><span class="bubble-content">我是一段文字内容，这是我写的东西</span><span class="bubble-notation bg-blue">我是提示文字</span></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
 <h2 id="Keyboard">Keyboard</h2>
 <p>展示键盘按键</p>
 <div class="tabs" id="keyboard"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#keyboard-0">语法</button></li><li class="tab"><button type="button" data-href="#keyboard-1">参数</button></li><li class="tab"><button type="button" data-href="#keyboard-2">示例</button></li><li class="tab"><button type="button" data-href="#keyboard-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="keyboard-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% keyboard &#x27;key&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="keyboard-1"><table>
@@ -846,7 +846,7 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 <td>无</td>
 </tr>
 </tbody>
-</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="keyboard-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% keyboard &#x27;ctrl&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="keyboard-3"><p><span class="keyboard">Ctrl</span></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
+</table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="keyboard-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% keyboard &#x27;ctrl&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="keyboard-3"><p><span class="keyboard-tag">Ctrl</span></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
 <h2 id="Spoiler">Spoiler</h2>
 <p>展示剧透</p>
 <div class="tabs" id="spoiler"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#spoiler-0">语法</button></li><li class="tab"><button type="button" data-href="#spoiler-1">参数</button></li><li class="tab"><button type="button" data-href="#spoiler-2">示例</button></li><li class="tab"><button type="button" data-href="#spoiler-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="spoiler-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% spoiler &#x27;style&#x27; &#x27;content&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="spoiler-1"><table>
