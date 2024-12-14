@@ -75,6 +75,72 @@
       </tags>
   </entry>
   <entry>
+    <title>Solitude 自定义侧边栏</title>
+    <url>/solitude-demo/posts/c63b9f20.html</url>
+    <content><![CDATA[<h2 id="自定义侧边栏">自定义侧边栏</h2>
+<p>模版：</p>
+<figure class="highlight yaml"><figcaption><span>aside.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> </span><br><span class="line">  <span class="attr">title:</span> </span><br><span class="line">  <span class="attr">class:</span> </span><br><span class="line">  <span class="attr">id:</span></span><br><span class="line">  <span class="attr">icon:</span> </span><br><span class="line">  <span class="attr">content_class:</span></span><br><span class="line">  <span class="attr">content_id:</span> </span><br><span class="line">  <span class="attr">content_css:</span> </span><br><span class="line">  <span class="attr">content_html:</span> </span><br></pre></td></tr></table></figure>
+<hr>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏名称</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏标题</td>
+</tr>
+<tr>
+<td>class</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏类名</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏id</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏图标</td>
+</tr>
+<tr>
+<td>content_class</td>
+<td>string</td>
+<td>无</td>
+<td>侧边栏内容类名</td>
+</tr>
+</tbody>
+</table>
+<h2 id="示例">示例</h2>
+<figure class="highlight yaml"><figcaption><span>aside.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">history</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">那年今日</span> </span><br><span class="line">  <span class="attr">class:</span> <span class="string">card-history</span></span><br><span class="line">  <span class="attr">id:</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-clock</span></span><br><span class="line">  <span class="attr">content_class:</span></span><br><span class="line">  <span class="attr">content_id:</span> <span class="string">history-baidu</span></span><br><span class="line">  <span class="attr">content_css:</span> <span class="string">&#x27;height:80px;overflow:hidden&#x27;</span></span><br><span class="line">  <span class="attr">content_html:</span> <span class="string">&#x27;&lt;div class=&quot;history_swiper-container&quot; id=&quot;history-container&quot; style=&quot;width: 100%;height: 100%;margin-top: 6px&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;div id=&quot;history_container_wrapper&quot; class=&quot;swiper-wrapper&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>/source/custom.js</span></figcaption><table><tr><td class="code"><pre><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">cardHistory</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">const</span> historyContainer = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;history-container&#x27;</span>);</span><br><span class="line">     <span class="keyword">if</span> (!historyContainer) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="title function_">fetchHistoryData</span>();</span><br><span class="line">     <span class="keyword">const</span> html = data.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> <span class="string">`</span></span><br><span class="line"><span class="string">         &lt;div class=&quot;swiper-slide history_slide&quot;&gt;</span></span><br><span class="line"><span class="string">             &lt;span class=&quot;history_slide_time&quot;&gt;A.D.<span class="subst">$&#123;item.year&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">             &lt;span class=&quot;history_slide_link&quot;&gt;<span class="subst">$&#123;item.title&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">         &lt;/div&gt;</span></span><br><span class="line"><span class="string">     `</span>).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> swiperContainer = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.history_swiper-container&#x27;</span>);</span><br><span class="line">     <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;history_container_wrapper&#x27;</span>).<span class="property">innerHTML</span> = html;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> swiperHistory = <span class="keyword">new</span> <span class="title class_">Swiper</span>(swiperContainer, &#123;</span><br><span class="line">         <span class="attr">loop</span>: <span class="literal">true</span>,</span><br><span class="line">         <span class="attr">direction</span>: <span class="string">&#x27;vertical&#x27;</span>,</span><br><span class="line">         <span class="attr">autoplay</span>: &#123;<span class="attr">disableOnInteraction</span>: <span class="literal">true</span>, <span class="attr">delay</span>: <span class="number">5000</span>&#125;,</span><br><span class="line">         <span class="attr">mousewheel</span>: <span class="literal">false</span>,</span><br><span class="line">     &#125;);</span><br><span class="line"></span><br><span class="line">     historyContainer.<span class="property">onmouseenter</span> = <span class="function">() =&gt;</span> swiperHistory.<span class="property">autoplay</span>.<span class="title function_">stop</span>();</span><br><span class="line">     historyContainer.<span class="property">onmouseleave</span> = <span class="function">() =&gt;</span> swiperHistory.<span class="property">autoplay</span>.<span class="title function_">start</span>();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="title function_">cardHistory</span>();</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pjax:complete&#x27;</span>, cardHistory);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fetchHistoryData</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">const</span> myDate = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">     <span class="keyword">const</span> month = <span class="string">`<span class="subst">$&#123;myDate.getMonth() + <span class="number">1</span>&#125;</span>`</span>.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">     <span class="keyword">const</span> day = <span class="string">`<span class="subst">$&#123;myDate.getDate()&#125;</span>`</span>.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">     <span class="keyword">const</span> formattedDate = <span class="string">`<span class="subst">$&#123;month&#125;</span><span class="subst">$&#123;day&#125;</span>`</span>;</span><br><span class="line">     <span class="keyword">const</span> historyDataUrl = <span class="string">`https://api.76.al/api/history/query?key=你的key`</span>; <span class="comment">//请到:https://api.76.al申请</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">try</span> &#123;</span><br><span class="line">         <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(historyDataUrl);</span><br><span class="line">         <span class="keyword">const</span> result = <span class="keyword">await</span> response.<span class="title function_">json</span>();</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (result.<span class="property">code</span> === <span class="number">200</span>) &#123;</span><br><span class="line">             <span class="keyword">const</span> data = result.<span class="property">data</span>;</span><br><span class="line">             <span class="keyword">const</span> formattedData = <span class="title class_">Object</span>.<span class="title function_">entries</span>(data).<span class="title function_">map</span>(<span class="function">(<span class="params">[year, event]</span>) =&gt;</span> (&#123;</span><br><span class="line">                 <span class="attr">year</span>: year.<span class="title function_">replace</span>(<span class="regexp">/年$/</span>, <span class="string">&#x27;&#x27;</span>),</span><br><span class="line">                 <span class="attr">title</span>: event</span><br><span class="line">             &#125;));</span><br><span class="line">             <span class="keyword">return</span> formattedData;</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">             <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Error fetching history data:&#x27;</span>, result.<span class="property">msg</span>);</span><br><span class="line">             <span class="keyword">return</span> [];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">         <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Fetch error:&#x27;</span>, error);</span><br><span class="line">         <span class="keyword">return</span> [];</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="title function_">cardHistory</span>()</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pjax:complete&#x27;</span>, cardHistory);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>_config.solitude.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">  <span class="comment"># Insert in head</span></span><br><span class="line">  <span class="comment"># 插入到 head</span></span><br><span class="line">  <span class="attr">body:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><figcaption><span>_config.solitude.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line">aside:</span><br><span class="line">  home: # on the homepage</span><br><span class="line">    noSticky: &quot;about,newest_comment&quot;</span><br><span class="line"><span class="addition">+   Sticky: &quot;history&quot;</span></span><br><span class="line">  post: # on the article page</span><br><span class="line">    noSticky: &quot;about&quot;</span><br><span class="line">    Sticky: &quot;newestPost&quot;</span><br><span class="line">  page: # on the page</span><br><span class="line">    noSticky: &quot;about&quot;</span><br><span class="line">    Sticky: &quot;newestPost,allInfo&quot;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Solitude</tag>
+        <tag>实用教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用 Hexo 的外挂标签，更加高效的在 Solitude 项目中进行创作</title>
     <url>/solitude-demo/posts/8f9926b7.html</url>
     <content><![CDATA[<div class="note danger modern no-icon"><p>内置的外挂标签满足大部分用户的需求，不需要额外安装插件。<br>
@@ -103,11 +169,11 @@
 打开配置文件中开关</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">chart:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <div class="tabs" id="chart"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#chart-0">语法</button></li><li class="tab"><button type="button" data-href="#chart-1">参数</button></li><li class="tab"><button type="button" data-href="#chart-2">示例</button></li><li class="tab"><button type="button" data-href="#chart-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="chart-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-1"><p>不需要参数。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br><span class="line">&#123;% endchart %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="chart-3"><div class="chart">
-    <canvas id="chart-y58hgl7l8"></canvas>
+    <canvas id="chart-7xo6tccg3"></canvas>
     <script>
     !function() {
       const chart = () => {
-        const canvas = document.getElementById("chart-y58hgl7l8");
+        const canvas = document.getElementById("chart-7xo6tccg3");
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
         new Chart(ctx, {type: 'bar',
@@ -210,13 +276,13 @@ options: {
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="typeit-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% typeit &#x27;div&#x27; &#125;</span><br><span class="line">waitUntilVisible: true,</span><br><span class="line">strings: &quot;Alex MacArthur&quot;,</span><br><span class="line">&#123;% endtypeit %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="typeit-3"><div class="typeit">
-    <div id="typeit-dapqo1puk"></div>
+    <div id="typeit-eaiyuop54"></div>
     <script>
     !function() {
       const typeit = () => {
-        const ctx = document.getElementById("typeit-dapqo1puk");
+        const ctx = document.getElementById("typeit-eaiyuop54");
         if (!ctx) return;
-        new TypeIt("#typeit-dapqo1puk", {waitUntilVisible: true,
+        new TypeIt("#typeit-eaiyuop54", {waitUntilVisible: true,
 strings: "Alex MacArthur"})
           .go();
       }
@@ -658,24 +724,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="githubrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% github &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="githubrepo-3"><div class="repo-card">
-  <a class='name-aaikz1d2y repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-aaikz1d2y repo-desc'></p>
+  <a class='name-67k32ins7 repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-67k32ins7 repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-aaikz1d2y'></span>
+    <span class='star-67k32ins7'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-aaikz1d2y'></span>
+    <span class='fork-67k32ins7'></span>
   </div>
-  <img class='lang-aaikz1d2y repo-language no-lightbox' />
+  <img class='lang-67k32ins7 repo-language no-lightbox' />
   <script>
     fetch('https://api.github.com/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-aaikz1d2y').innerText = data.name;
-        document.querySelector('.desc-aaikz1d2y').innerText = data.description;
-        document.querySelector('.star-aaikz1d2y').innerText = data.stargazers_count;
-        document.querySelector('.fork-aaikz1d2y').innerText = data.forks_count;
-        document.querySelector('.lang-aaikz1d2y').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-67k32ins7').innerText = data.name;
+        document.querySelector('.desc-67k32ins7').innerText = data.description;
+        document.querySelector('.star-67k32ins7').innerText = data.stargazers_count;
+        document.querySelector('.fork-67k32ins7').innerText = data.forks_count;
+        document.querySelector('.lang-67k32ins7').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -702,24 +768,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitearepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitea &#x27;https://git.fsfe.org&#x27; &#x27;FSFE/fsfe-website&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitearepo-3"><div class="repo-card">
-  <a class='name-o5t0d7rus repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
-  <p class='desc-o5t0d7rus repo-desc'></p>
+  <a class='name-nop36rc22 repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
+  <p class='desc-nop36rc22 repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-o5t0d7rus'></span>
+    <span class='star-nop36rc22'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-o5t0d7rus'></span>
+    <span class='fork-nop36rc22'></span>
   </div>
-  <img class='lang-o5t0d7rus repo-language no-lightbox' />
+  <img class='lang-nop36rc22 repo-language no-lightbox' />
   <script>
     fetch('https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-o5t0d7rus').innerText = data.name;
-        document.querySelector('.desc-o5t0d7rus').innerText = data.description;
-        document.querySelector('.star-o5t0d7rus').innerText = data.stars_count;
-        document.querySelector('.fork-o5t0d7rus').innerText = data.forks_count;
-        document.querySelector('.lang-o5t0d7rus').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-nop36rc22').innerText = data.name;
+        document.querySelector('.desc-nop36rc22').innerText = data.description;
+        document.querySelector('.star-nop36rc22').innerText = data.stars_count;
+        document.querySelector('.fork-nop36rc22').innerText = data.forks_count;
+        document.querySelector('.lang-nop36rc22').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -741,24 +807,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="giteerepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitee &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="giteerepo-3"><div class="repo-card">
-  <a class='name-3twvdx6hl repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-3twvdx6hl repo-desc'></p>
+  <a class='name-m60coz6e5 repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-m60coz6e5 repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-3twvdx6hl'></span>
+    <span class='star-m60coz6e5'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-3twvdx6hl'></span>
+    <span class='fork-m60coz6e5'></span>
   </div>
-  <img class='lang-3twvdx6hl repo-language no-lightbox' />
+  <img class='lang-m60coz6e5 repo-language no-lightbox' />
   <script>
     fetch('https://gitee.com/api/v5/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-3twvdx6hl').innerText = data.name;
-        document.querySelector('.desc-3twvdx6hl').innerText = data.description;
-        document.querySelector('.star-3twvdx6hl').innerText = data.stargazers_count;
-        document.querySelector('.fork-3twvdx6hl').innerText = data.forks_count;
-        document.querySelector('.lang-3twvdx6hl').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-m60coz6e5').innerText = data.name;
+        document.querySelector('.desc-m60coz6e5').innerText = data.description;
+        document.querySelector('.star-m60coz6e5').innerText = data.stargazers_count;
+        document.querySelector('.fork-m60coz6e5').innerText = data.forks_count;
+        document.querySelector('.lang-m60coz6e5').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -780,24 +846,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
 </tr>
 </tbody>
 </table><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitlabrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitlab &#x27;gitlab-org/gitlab&#x27; %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="gitlabrepo-3"><div class="repo-card">
-  <a class='name-48lu7ezn6 repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
-  <p class='desc-48lu7ezn6 repo-desc'></p>
+  <a class='name-yvbuauzp4 repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
+  <p class='desc-yvbuauzp4 repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-48lu7ezn6'></span>
+    <span class='star-yvbuauzp4'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-48lu7ezn6'></span>
+    <span class='fork-yvbuauzp4'></span>
   </div>
-  <img class='lang-48lu7ezn6 repo-language no-lightbox' />
+  <img class='lang-yvbuauzp4 repo-language no-lightbox' />
   <script>
     fetch('https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-48lu7ezn6').innerText = data.name;
-        document.querySelector('.desc-48lu7ezn6').innerText = data.description;
-        document.querySelector('.star-48lu7ezn6').innerText = data.star_count;
-        document.querySelector('.fork-48lu7ezn6').innerText = data.forks_count;
-        document.querySelector('.lang-48lu7ezn6').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
+        document.querySelector('.name-yvbuauzp4').innerText = data.name;
+        document.querySelector('.desc-yvbuauzp4').innerText = data.description;
+        document.querySelector('.star-yvbuauzp4').innerText = data.star_count;
+        document.querySelector('.fork-yvbuauzp4').innerText = data.forks_count;
+        document.querySelector('.lang-yvbuauzp4').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
     });
   </script>
   </div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="solitude fas fa-arrow-up"></i></button></div></div></div>
@@ -877,72 +943,6 @@ icon: fantawesome 图标（例如： fas fa-mail）</p><button type="button" cla
       </categories>
       <tags>
         <tag>外挂标签</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Solitude 自定义侧边栏</title>
-    <url>/solitude-demo/posts/c63b9f20.html</url>
-    <content><![CDATA[<h2 id="自定义侧边栏">自定义侧边栏</h2>
-<p>模版：</p>
-<figure class="highlight yaml"><figcaption><span>aside.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> </span><br><span class="line">  <span class="attr">title:</span> </span><br><span class="line">  <span class="attr">class:</span> </span><br><span class="line">  <span class="attr">id:</span></span><br><span class="line">  <span class="attr">icon:</span> </span><br><span class="line">  <span class="attr">content_class:</span></span><br><span class="line">  <span class="attr">content_id:</span> </span><br><span class="line">  <span class="attr">content_css:</span> </span><br><span class="line">  <span class="attr">content_html:</span> </span><br></pre></td></tr></table></figure>
-<hr>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>默认值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏名称</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏标题</td>
-</tr>
-<tr>
-<td>class</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏类名</td>
-</tr>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏id</td>
-</tr>
-<tr>
-<td>icon</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏图标</td>
-</tr>
-<tr>
-<td>content_class</td>
-<td>string</td>
-<td>无</td>
-<td>侧边栏内容类名</td>
-</tr>
-</tbody>
-</table>
-<h2 id="示例">示例</h2>
-<figure class="highlight yaml"><figcaption><span>aside.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">history</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">那年今日</span> </span><br><span class="line">  <span class="attr">class:</span> <span class="string">card-history</span></span><br><span class="line">  <span class="attr">id:</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-clock</span></span><br><span class="line">  <span class="attr">content_class:</span></span><br><span class="line">  <span class="attr">content_id:</span> <span class="string">history-baidu</span></span><br><span class="line">  <span class="attr">content_css:</span> <span class="string">&#x27;height:80px;overflow:hidden&#x27;</span></span><br><span class="line">  <span class="attr">content_html:</span> <span class="string">&#x27;&lt;div class=&quot;history_swiper-container&quot; id=&quot;history-container&quot; style=&quot;width: 100%;height: 100%;margin-top: 6px&quot;&gt;</span></span><br><span class="line"><span class="string">        &lt;div id=&quot;history_container_wrapper&quot; class=&quot;swiper-wrapper&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;&#x27;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><figcaption><span>/source/custom.js</span></figcaption><table><tr><td class="code"><pre><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">cardHistory</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">const</span> historyContainer = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;history-container&#x27;</span>);</span><br><span class="line">     <span class="keyword">if</span> (!historyContainer) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="title function_">fetchHistoryData</span>();</span><br><span class="line">     <span class="keyword">const</span> html = data.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> <span class="string">`</span></span><br><span class="line"><span class="string">         &lt;div class=&quot;swiper-slide history_slide&quot;&gt;</span></span><br><span class="line"><span class="string">             &lt;span class=&quot;history_slide_time&quot;&gt;A.D.<span class="subst">$&#123;item.year&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">             &lt;span class=&quot;history_slide_link&quot;&gt;<span class="subst">$&#123;item.title&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">         &lt;/div&gt;</span></span><br><span class="line"><span class="string">     `</span>).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> swiperContainer = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.history_swiper-container&#x27;</span>);</span><br><span class="line">     <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;history_container_wrapper&#x27;</span>).<span class="property">innerHTML</span> = html;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">const</span> swiperHistory = <span class="keyword">new</span> <span class="title class_">Swiper</span>(swiperContainer, &#123;</span><br><span class="line">         <span class="attr">loop</span>: <span class="literal">true</span>,</span><br><span class="line">         <span class="attr">direction</span>: <span class="string">&#x27;vertical&#x27;</span>,</span><br><span class="line">         <span class="attr">autoplay</span>: &#123;<span class="attr">disableOnInteraction</span>: <span class="literal">true</span>, <span class="attr">delay</span>: <span class="number">5000</span>&#125;,</span><br><span class="line">         <span class="attr">mousewheel</span>: <span class="literal">false</span>,</span><br><span class="line">     &#125;);</span><br><span class="line"></span><br><span class="line">     historyContainer.<span class="property">onmouseenter</span> = <span class="function">() =&gt;</span> swiperHistory.<span class="property">autoplay</span>.<span class="title function_">stop</span>();</span><br><span class="line">     historyContainer.<span class="property">onmouseleave</span> = <span class="function">() =&gt;</span> swiperHistory.<span class="property">autoplay</span>.<span class="title function_">start</span>();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="title function_">cardHistory</span>();</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pjax:complete&#x27;</span>, cardHistory);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fetchHistoryData</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">const</span> myDate = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">     <span class="keyword">const</span> month = <span class="string">`<span class="subst">$&#123;myDate.getMonth() + <span class="number">1</span>&#125;</span>`</span>.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">     <span class="keyword">const</span> day = <span class="string">`<span class="subst">$&#123;myDate.getDate()&#125;</span>`</span>.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">     <span class="keyword">const</span> formattedDate = <span class="string">`<span class="subst">$&#123;month&#125;</span><span class="subst">$&#123;day&#125;</span>`</span>;</span><br><span class="line">     <span class="keyword">const</span> historyDataUrl = <span class="string">`https://api.76.al/api/history/query?key=你的key`</span>; <span class="comment">//请到:https://api.76.al申请</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">try</span> &#123;</span><br><span class="line">         <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(historyDataUrl);</span><br><span class="line">         <span class="keyword">const</span> result = <span class="keyword">await</span> response.<span class="title function_">json</span>();</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (result.<span class="property">code</span> === <span class="number">200</span>) &#123;</span><br><span class="line">             <span class="keyword">const</span> data = result.<span class="property">data</span>;</span><br><span class="line">             <span class="keyword">const</span> formattedData = <span class="title class_">Object</span>.<span class="title function_">entries</span>(data).<span class="title function_">map</span>(<span class="function">(<span class="params">[year, event]</span>) =&gt;</span> (&#123;</span><br><span class="line">                 <span class="attr">year</span>: year.<span class="title function_">replace</span>(<span class="regexp">/年$/</span>, <span class="string">&#x27;&#x27;</span>),</span><br><span class="line">                 <span class="attr">title</span>: event</span><br><span class="line">             &#125;));</span><br><span class="line">             <span class="keyword">return</span> formattedData;</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">             <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Error fetching history data:&#x27;</span>, result.<span class="property">msg</span>);</span><br><span class="line">             <span class="keyword">return</span> [];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">         <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Fetch error:&#x27;</span>, error);</span><br><span class="line">         <span class="keyword">return</span> [];</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="title function_">cardHistory</span>()</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;pjax:complete&#x27;</span>, cardHistory);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><figcaption><span>_config.solitude.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">extends:</span></span><br><span class="line">  <span class="comment"># Insert in head</span></span><br><span class="line">  <span class="comment"># 插入到 head</span></span><br><span class="line">  <span class="attr">body:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/custom.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight diff"><figcaption><span>_config.solitude.yaml</span></figcaption><table><tr><td class="code"><pre><span class="line">aside:</span><br><span class="line">  home: # on the homepage</span><br><span class="line">    noSticky: &quot;about,newest_comment&quot;</span><br><span class="line"><span class="addition">+   Sticky: &quot;history&quot;</span></span><br><span class="line">  post: # on the article page</span><br><span class="line">    noSticky: &quot;about&quot;</span><br><span class="line">    Sticky: &quot;newestPost&quot;</span><br><span class="line">  page: # on the page</span><br><span class="line">    noSticky: &quot;about&quot;</span><br><span class="line">    Sticky: &quot;newestPost,allInfo&quot;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Solitude</tag>
-        <tag>实用教程</tag>
       </tags>
   </entry>
   <entry>
