@@ -46,3 +46,11 @@ links:
             descr: Everything collapses, but you rise. # 友链简介
             tag: rin
             color: purple
+
+          - name: 旅禾小栈
+            link: https://home.qqzhi.cc
+            descr: 欢迎来到旅禾小栈！
+            avatar: https://home.qqzhi.cc/img/avatar.webp
+            tag: 旅禾
+            color: "#66ccff"
+            
