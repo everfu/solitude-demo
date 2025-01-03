@@ -458,10 +458,10 @@ errorpage:
 # Says Page
 # 即可短文
 says:
-  enable: false
-  home_mini: false
+  enable: true
+  home_mini: true
   page: /essay/
-  style: 1
+  style: 2
   strip: 30
 # --------------------------- end ---------------------------
 
@@ -899,7 +899,7 @@ right_menu:
   enable: true
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
-  commentBarrage: true
+  commentBarrage: false
   # Simplified and Traditional Chinese translation.
   # 简繁体转换
   translate: false
@@ -912,12 +912,12 @@ right_menu:
       class:
       icon: fas fa-tower-broadcast
     - name: 全部分类
-      click: pjax.loadUrl('/categories/') # External links with window.open, pjax can not request cross-domain content.
+      click: pjax.loadUrl('categories/') # External links with window.open, pjax can not request cross-domain content.
       id:
       class:
       icon: fas fa-clone
     - name: 所有标签
-      click: pjax.loadUrl('/tags/')
+      click: pjax.loadUrl('tags/')
       id:
       class:
       icon: fas fa-tags
