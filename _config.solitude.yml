@@ -342,17 +342,17 @@ post:
   # Share icon
   # 分享图标
   share:
-    enable: false
+    enable: true
     list:
-      # - qq
-      # - weibo
-      # - twitter
-      # - facebook
-      # - telegram
-      # - whatsapp
-      # - linkedin
-      # - link
-      # - qrcode
+      - qq
+      - weibo
+      - twitter
+      - facebook
+      - telegram
+      - whatsapp
+      - linkedin
+      - link
+      - qrcode
   rss: solitude-demo/atom.xml
   # Article reading progress
   # 文章封面取色
@@ -982,7 +982,7 @@ rightside:
 # Do not modify unless necessary
 # 非必要请勿修改
 CDN:
-  internal: custom # local / cdnjs / jsdelivr / unpkg / custom
+  internal: local # local / cdnjs / jsdelivr / unpkg / custom
   third_party: custom # cdnjs / jsdelivr / unpkg / custom
   version: true # Whether to use the version number
   custom_format: https://fastly.jsdelivr.net/npm/${name}@${version}/${min_file} # Custom format
