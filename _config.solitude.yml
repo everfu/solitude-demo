@@ -733,13 +733,13 @@ extends:
   # Insert in head
   # 插入到 head
   head:
-    - <link rel="stylesheet" href="/css/schedule.css">
+    - <link rel="stylesheet" href="https://everfu.github.io/solitude-demo/css/schedule.css">
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
 
   # Insert in body
   # 插入到 body
   body:
-    - <script src="/js/schedule.js"></script>
+    - <script src="https://everfu.github.io/solitude-demo/js/schedule.js"></script>
     - <script src="https://npm.akass.cn/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script>
 # --------------------------- end ---------------------------
 
