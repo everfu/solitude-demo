@@ -6,7 +6,7 @@
   <link href="https://everfu.github.io/solitude-demo/atom.xml" rel="self"/>
   
   <link href="https://everfu.github.io/solitude-demo/"/>
-  <updated>2025-04-04T16:00:00.000Z</updated>
+  <updated>2024-11-11T02:00:00.000Z</updated>
   <id>https://everfu.github.io/solitude-demo/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>蓝桥杯省赛Web大学组赛题 - 偷梁换柱</title>
-    <link href="https://everfu.github.io/solitude-demo/posts/3183.html"/>
-    <id>https://everfu.github.io/solitude-demo/posts/3183.html</id>
-    <published>2025-04-04T16:00:00.000Z</published>
-    <updated>2025-04-04T16:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;目标&quot;&gt;目标&lt;/h2&gt;
-&lt;p&gt;在文件 age.js 中，有一个 person 对象，当它的 age 属性值改变时需要对新值做判断，将其永远控制在 0 - 150 之间。具体需求如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>为你的网站增加一个漂亮的今日热门侧边栏，让访客一眼看到今日最热内容</title>
