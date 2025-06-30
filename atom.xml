@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>伍拾柒</title>
+  <icon>https://www.efu.me/icon.png</icon>
+  
+  <link href="https://www.efu.me/atom.xml" rel="self"/>
+  
+  <link href="https://www.efu.me/"/>
+  <updated>2025-04-04T16:00:00.000Z</updated>
+  <id>https://www.efu.me/</id>
+  
+  <author>
+    <name>伍拾柒</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯省赛Web大学组赛题 - 偷梁换柱</title>
+    <link href="https://www.efu.me/posts/3183.html"/>
+    <id>https://www.efu.me/posts/3183.html</id>
+    <published>2025-04-04T16:00:00.000Z</published>
+    <updated>2025-04-04T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;目标&quot;&gt;目标&lt;/h2&gt;
+&lt;p&gt;在文件 age.js 中，有一个 person 对象，当它的 age 属性值改变时需要对新值做判断，将其永远控制在 0 - 150 之间。具体需求如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>为你的网站增加一个漂亮的今日热门侧边栏，让访客一眼看到今日最热内容</title>
+    <link href="https://www.efu.me/posts/f86654a0.html"/>
+    <id>https://www.efu.me/posts/f86654a0.html</id>
+    <published>2024-11-11T02:00:00.000Z</published>
+    <updated>2024-11-11T02:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;实现基于 Umami 后端 API 提供的页面访问量统计，通过 PHP 脚本获取当天的页面访问总量，并返回数据给前端，通过 JS 脚本将数据渲染到侧边栏的今日热门卡片中。&lt;/p&gt;
+&lt;h2 id=&quot;搭建-Umami&quot;&gt;搭建</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="PHP" scheme="https://www.efu.me/tags/PHP/"/>
+    
+    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建日历侧边栏卡片</title>
+    <link href="https://www.efu.me/posts/874ddadb.html"/>
+    <id>https://www.efu.me/posts/874ddadb.html</id>
+    <published>2024-11-09T10:00:00.000Z</published>
+    <updated>2025-03-12T08:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;需要准备的文件&quot;&gt;需要准备的文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;日历卡片样式文件：&lt;code&gt;schedule.css&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义侧边栏</title>
+    <link href="https://www.efu.me/posts/c63b9f20.html"/>
+    <id>https://www.efu.me/posts/c63b9f20.html</id>
+    <published>2024-11-07T02:00:00.000Z</published>
+    <updated>2024-11-07T02:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;自定义侧边栏&quot;&gt;自定义侧边栏&lt;/h2&gt;
+&lt;p&gt;模版：&lt;/p&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;figcaption&gt;&lt;span&gt;aside.yaml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    
+    <category term="侧边栏" scheme="https://www.efu.me/tags/%E4%BE%A7%E8%BE%B9%E6%A0%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>外挂标签使用</title>
+    <link href="https://www.efu.me/posts/8f9926b7.html"/>
+    <id>https://www.efu.me/posts/8f9926b7.html</id>
+    <published>2024-10-07T16:00:00.000Z</published>
+    <updated>2024-10-07T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;内置的外挂标签满足大部分用户的需求，不需要额外安装插件。&lt;br&gt;
+插件的外挂标签需要安装对应的插件，满足部分用户的特殊需求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;内置标签&lt;/h1&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    
+    <category term="外挂标签" scheme="https://www.efu.me/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改豆瓣插件样式</title>
+    <link href="https://www.efu.me/posts/9840.html"/>
+    <id>https://www.efu.me/posts/9840.html</id>
+    <published>2024-09-26T07:00:00.000Z</published>
+    <updated>2024-09-26T07:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装插件&quot;&gt;安装插件&lt;/h2&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    
+    <category term="豆瓣" scheme="https://www.efu.me/tags/%E8%B1%86%E7%93%A3/"/>
+    
+  </entry>
+  
+</feed>
