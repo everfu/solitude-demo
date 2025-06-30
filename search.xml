@@ -92,11 +92,11 @@
 打开配置文件中开关</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">chart:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <div class="tabs" id="chart"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#chart-0">语法</button></li><li class="tab"><button type="button" data-href="#chart-1">参数</button></li><li class="tab"><button type="button" data-href="#chart-2">示例</button></li><li class="tab"><button type="button" data-href="#chart-3">效果</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="chart-0"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="chart-1"><p>不需要参数。</p></div><div class="tab-item-content" id="chart-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% chart %&#125;</span><br><span class="line">&#123;% endchart %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="chart-3"><div class="chart">
-    <canvas id="chart-hbrurn9rs"></canvas>
+    <canvas id="chart-2boc67a8m"></canvas>
     <script>
     !function() {
       const chart = () => {
-        const canvas = document.getElementById("chart-hbrurn9rs");
+        const canvas = document.getElementById("chart-2boc67a8m");
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
         new Chart(ctx, {type: 'bar',
@@ -199,13 +199,13 @@ beginAtZero: true,
 </tr>
 </tbody>
 </table></div><div class="tab-item-content" id="typeit-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% typeit &#x27;div&#x27; &#125;</span><br><span class="line">waitUntilVisible: true,</span><br><span class="line">strings: &quot;Alex MacArthur&quot;,</span><br><span class="line">&#123;% endtypeit %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="typeit-3"><div class="typeit">
-    <div id="typeit-lgjtlfsbn"></div>
+    <div id="typeit-fy7mozblz"></div>
     <script>
     !function() {
       const typeit = () => {
-        const ctx = document.getElementById("typeit-lgjtlfsbn");
+        const ctx = document.getElementById("typeit-fy7mozblz");
         if (!ctx) return;
-        new TypeIt("#typeit-lgjtlfsbn", {waitUntilVisible: true,
+        new TypeIt("#typeit-fy7mozblz", {waitUntilVisible: true,
 strings: "Alex MacArthur"})
           .go();
       }
@@ -647,24 +647,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p></div><div class="tab-ite
 </tr>
 </tbody>
 </table></div><div class="tab-item-content" id="githubrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% github &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="githubrepo-3"><div class="repo-card">
-  <a class='name-rj7y4cn06 repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-rj7y4cn06 repo-desc'></p>
+  <a class='name-vwg3f4l5n repo-title fancybox' href="https://github.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-vwg3f4l5n repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-rj7y4cn06'></span>
+    <span class='star-vwg3f4l5n'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-rj7y4cn06'></span>
+    <span class='fork-vwg3f4l5n'></span>
   </div>
-  <img class='lang-rj7y4cn06 repo-language no-lightbox' />
+  <img class='lang-vwg3f4l5n repo-language no-lightbox' />
   <script>
     fetch('https://api.github.com/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-rj7y4cn06').innerText = data.name;
-        document.querySelector('.desc-rj7y4cn06').innerText = data.description;
-        document.querySelector('.star-rj7y4cn06').innerText = data.stargazers_count;
-        document.querySelector('.fork-rj7y4cn06').innerText = data.forks_count;
-        document.querySelector('.lang-rj7y4cn06').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-vwg3f4l5n').innerText = data.name;
+        document.querySelector('.desc-vwg3f4l5n').innerText = data.description;
+        document.querySelector('.star-vwg3f4l5n').innerText = data.stargazers_count;
+        document.querySelector('.fork-vwg3f4l5n').innerText = data.forks_count;
+        document.querySelector('.lang-vwg3f4l5n').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div></div></div></div>
@@ -691,24 +691,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p></div><div class="tab-ite
 </tr>
 </tbody>
 </table></div><div class="tab-item-content" id="gitearepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitea &#x27;https://git.fsfe.org&#x27; &#x27;FSFE/fsfe-website&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="gitearepo-3"><div class="repo-card">
-  <a class='name-2wqpd6xmo repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
-  <p class='desc-2wqpd6xmo repo-desc'></p>
+  <a class='name-9puxrm6qz repo-title fancybox' href="https://git.fsfe.org/FSFE/fsfe-website"></a>
+  <p class='desc-9puxrm6qz repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-2wqpd6xmo'></span>
+    <span class='star-9puxrm6qz'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-2wqpd6xmo'></span>
+    <span class='fork-9puxrm6qz'></span>
   </div>
-  <img class='lang-2wqpd6xmo repo-language no-lightbox' />
+  <img class='lang-9puxrm6qz repo-language no-lightbox' />
   <script>
     fetch('https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-2wqpd6xmo').innerText = data.name;
-        document.querySelector('.desc-2wqpd6xmo').innerText = data.description;
-        document.querySelector('.star-2wqpd6xmo').innerText = data.stars_count;
-        document.querySelector('.fork-2wqpd6xmo').innerText = data.forks_count;
-        document.querySelector('.lang-2wqpd6xmo').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-9puxrm6qz').innerText = data.name;
+        document.querySelector('.desc-9puxrm6qz').innerText = data.description;
+        document.querySelector('.star-9puxrm6qz').innerText = data.stars_count;
+        document.querySelector('.fork-9puxrm6qz').innerText = data.forks_count;
+        document.querySelector('.lang-9puxrm6qz').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div></div></div></div>
@@ -730,24 +730,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p></div><div class="tab-ite
 </tr>
 </tbody>
 </table></div><div class="tab-item-content" id="giteerepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitee &#x27;everfu/hexo-theme-solitude&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="giteerepo-3"><div class="repo-card">
-  <a class='name-568dm17uj repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
-  <p class='desc-568dm17uj repo-desc'></p>
+  <a class='name-7lwlotp2z repo-title fancybox' href="https://gitee.com/everfu/hexo-theme-solitude"></a>
+  <p class='desc-7lwlotp2z repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-568dm17uj'></span>
+    <span class='star-7lwlotp2z'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-568dm17uj'></span>
+    <span class='fork-7lwlotp2z'></span>
   </div>
-  <img class='lang-568dm17uj repo-language no-lightbox' />
+  <img class='lang-7lwlotp2z repo-language no-lightbox' />
   <script>
     fetch('https://gitee.com/api/v5/repos/everfu/hexo-theme-solitude')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-568dm17uj').innerText = data.name;
-        document.querySelector('.desc-568dm17uj').innerText = data.description;
-        document.querySelector('.star-568dm17uj').innerText = data.stargazers_count;
-        document.querySelector('.fork-568dm17uj').innerText = data.forks_count;
-        document.querySelector('.lang-568dm17uj').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
+        document.querySelector('.name-7lwlotp2z').innerText = data.name;
+        document.querySelector('.desc-7lwlotp2z').innerText = data.description;
+        document.querySelector('.star-7lwlotp2z').innerText = data.stargazers_count;
+        document.querySelector('.fork-7lwlotp2z').innerText = data.forks_count;
+        document.querySelector('.lang-7lwlotp2z').src = 'https://skillicons.dev/icons?i=' + data.language.toLowerCase();
     });
   </script>
   </div></div></div></div>
@@ -769,24 +769,24 @@ icon: fantawesome 图标（例如： fas fa-mail）</p></div><div class="tab-ite
 </tr>
 </tbody>
 </table></div><div class="tab-item-content" id="gitlabrepo-2"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gitlab &#x27;gitlab-org/gitlab&#x27; %&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="gitlabrepo-3"><div class="repo-card">
-  <a class='name-5uths3tmp repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
-  <p class='desc-5uths3tmp repo-desc'></p>
+  <a class='name-iguv10yig repo-title fancybox' href="https://gitlab.com/gitlab-org/gitlab"></a>
+  <p class='desc-iguv10yig repo-desc'></p>
   <div class="repo-gist">
     <i class="fas fa-star"></i>
-    <span class='star-5uths3tmp'></span>
+    <span class='star-iguv10yig'></span>
     <i class="fas fa-code-branch"></i>
-    <span class='fork-5uths3tmp'></span>
+    <span class='fork-iguv10yig'></span>
   </div>
-  <img class='lang-5uths3tmp repo-language no-lightbox' />
+  <img class='lang-iguv10yig repo-language no-lightbox' />
   <script>
     fetch('https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab')
       .then(res => res.json())
       .then(data => {
-        document.querySelector('.name-5uths3tmp').innerText = data.name;
-        document.querySelector('.desc-5uths3tmp').innerText = data.description;
-        document.querySelector('.star-5uths3tmp').innerText = data.star_count;
-        document.querySelector('.fork-5uths3tmp').innerText = data.forks_count;
-        document.querySelector('.lang-5uths3tmp').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
+        document.querySelector('.name-iguv10yig').innerText = data.name;
+        document.querySelector('.desc-iguv10yig').innerText = data.description;
+        document.querySelector('.star-iguv10yig').innerText = data.star_count;
+        document.querySelector('.fork-iguv10yig').innerText = data.forks_count;
+        document.querySelector('.lang-iguv10yig').src = 'https://skillicons.dev/icons?i=' + data.topics[data.topics.length - 1].toLowerCase().replace('.','');
     });
   </script>
   </div></div></div></div>

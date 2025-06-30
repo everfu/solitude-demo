@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://everfu.github.io/solitude-demo/about/index.html</loc>
-    
-    <lastmod>2025-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://everfu.github.io/solitude-demo/kit/index.html</loc>
     
     <lastmod>2025-06-30</lastmod>
@@ -39,6 +30,15 @@
   
   <url>
     <loc>https://everfu.github.io/solitude-demo/tags/index.html</loc>
+    
+    <lastmod>2025-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://everfu.github.io/solitude-demo/about/index.html</loc>
     
     <lastmod>2025-06-30</lastmod>
     
