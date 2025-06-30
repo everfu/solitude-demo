@@ -1,0 +1,48 @@
+{
+  "name": "solitude-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server",
+    "u": "hexo clean && hexo g && gulp && hexo d"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "@renbaoshuo/markdown-it-katex": "^2.0.2",
+    "cheerio": "^1.0.0",
+    "compress": "^0.99.0",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "gulp-terser": "^2.1.0",
+    "hexo": "^7.3.0",
+    "hexo-abbrlink": "^2.2.1",
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-filter-nofollow": "^2.0.2",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-markdown-it": "^7.1.1",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-solitude-tag": "^1.0.22",
+    "hexo-theme-solitude": "^3.0.18",
+    "hexo-util": "^3.3.0",
+    "hexo-wordcount": "^6.0.1",
+    "katex": "^0.16.21",
+    "moment": "^2.30.1"
+  },
+  "packageManager": "pnpm@10.12.4"
+}

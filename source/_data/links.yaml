@@ -1,0 +1,14 @@
+banner_suffix:
+links:
+  - class_name: 推荐 # 分类名称
+    descr: 参与本站开发、提供设计灵感、捐助本站的优秀博主 # 分类简介
+    type: card # 显示方式，有两种 card / item
+    suffix:
+    link_list:
+      - name: 伍十七 # 友链名称
+        link: https://github.com/everfu # 友链地址
+        descr: 一个狂热的开源工作者 # 友链简介
+        avatar: https://avatars.githubusercontent.com/u/74389842?v=4 # 显示头像
+        topimg: https://s3.qjqq.cn/47/674c6c6783097.png!color # 如果是card模式下，将显示
+        tag: 博主
+        color: vip
