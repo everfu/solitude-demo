@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>伍拾柒</title>
-  <icon>https://www.efu.me/icon.png</icon>
+  <icon>https://everfu.github.io/solitude-demo/icon.png</icon>
   
-  <link href="https://www.efu.me/atom.xml" rel="self"/>
+  <link href="https://everfu.github.io/solitude-demo/atom.xml" rel="self"/>
   
-  <link href="https://www.efu.me/"/>
+  <link href="https://everfu.github.io/solitude-demo/"/>
   <updated>2025-04-04T16:00:00.000Z</updated>
-  <id>https://www.efu.me/</id>
+  <id>https://everfu.github.io/solitude-demo/</id>
   
   <author>
     <name>伍拾柒</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>蓝桥杯省赛Web大学组赛题 - 偷梁换柱</title>
-    <link href="https://www.efu.me/posts/3183.html"/>
-    <id>https://www.efu.me/posts/3183.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/3183.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/3183.html</id>
     <published>2025-04-04T16:00:00.000Z</published>
     <updated>2025-04-04T16:00:00.000Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>为你的网站增加一个漂亮的今日热门侧边栏，让访客一眼看到今日最热内容</title>
-    <link href="https://www.efu.me/posts/f86654a0.html"/>
-    <id>https://www.efu.me/posts/f86654a0.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/f86654a0.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/f86654a0.html</id>
     <published>2024-11-11T02:00:00.000Z</published>
     <updated>2024-11-11T02:00:00.000Z</updated>
     
@@ -58,19 +58,19 @@
     
     
     
-    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="PHP" scheme="https://www.efu.me/tags/PHP/"/>
+    <category term="PHP" scheme="https://everfu.github.io/solitude-demo/tags/PHP/"/>
     
-    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>创建日历侧边栏卡片</title>
-    <link href="https://www.efu.me/posts/874ddadb.html"/>
-    <id>https://www.efu.me/posts/874ddadb.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/874ddadb.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/874ddadb.html</id>
     <published>2024-11-09T10:00:00.000Z</published>
     <updated>2025-03-12T08:00:00.000Z</updated>
     
@@ -89,17 +89,17 @@
     
     
     
-    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>自定义侧边栏</title>
-    <link href="https://www.efu.me/posts/c63b9f20.html"/>
-    <id>https://www.efu.me/posts/c63b9f20.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/c63b9f20.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/c63b9f20.html</id>
     <published>2024-11-07T02:00:00.000Z</published>
     <updated>2024-11-07T02:00:00.000Z</updated>
     
@@ -116,19 +116,19 @@
     
     
     
-    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
     
-    <category term="侧边栏" scheme="https://www.efu.me/tags/%E4%BE%A7%E8%BE%B9%E6%A0%8F/"/>
+    <category term="侧边栏" scheme="https://everfu.github.io/solitude-demo/tags/%E4%BE%A7%E8%BE%B9%E6%A0%8F/"/>
     
   </entry>
   
   <entry>
     <title>外挂标签使用</title>
-    <link href="https://www.efu.me/posts/8f9926b7.html"/>
-    <id>https://www.efu.me/posts/8f9926b7.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/8f9926b7.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/8f9926b7.html</id>
     <published>2024-10-07T16:00:00.000Z</published>
     <updated>2024-10-07T16:00:00.000Z</updated>
     
@@ -148,19 +148,19 @@
     
     
     
-    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
     
-    <category term="外挂标签" scheme="https://www.efu.me/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
+    <category term="外挂标签" scheme="https://everfu.github.io/solitude-demo/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
   <entry>
     <title>修改豆瓣插件样式</title>
-    <link href="https://www.efu.me/posts/9840.html"/>
-    <id>https://www.efu.me/posts/9840.html</id>
+    <link href="https://everfu.github.io/solitude-demo/posts/9840.html"/>
+    <id>https://everfu.github.io/solitude-demo/posts/9840.html</id>
     <published>2024-09-26T07:00:00.000Z</published>
     <updated>2024-09-26T07:00:00.000Z</updated>
     
@@ -176,12 +176,12 @@
     
     
     
-    <category term="实用教程" scheme="https://www.efu.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://www.efu.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
     
-    <category term="豆瓣" scheme="https://www.efu.me/tags/%E8%B1%86%E7%93%A3/"/>
+    <category term="豆瓣" scheme="https://everfu.github.io/solitude-demo/tags/%E8%B1%86%E7%93%A3/"/>
     
   </entry>
   
