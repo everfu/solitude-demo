@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>伍拾柒</title>
+  <title>Solitude</title>
   <icon>https://everfu.github.io/solitude-demo/icon.png</icon>
   
   <link href="https://everfu.github.io/solitude-demo/atom.xml" rel="self"/>
