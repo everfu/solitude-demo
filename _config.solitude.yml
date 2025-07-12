@@ -18,7 +18,7 @@ nav:
   # 左侧盒子
   group:
     项目:
-      Solitude: https://github.com/everfu/hexo-theme-solitude || img/logo.png # name: url || icon
+      Solitude: https://github.com/everfu/hexo-theme-solitude || /solitude-demo/img/logo.png # name: url || icon
 
   # Menu
   # 菜单
@@ -286,7 +286,7 @@ post:
   covercolor:
     enable: true
     # local: local color / api: api color / ave: oss average color
-    mode: ave
+    mode: local
     # api address / api 地址
     api: https://api.qjqq.cn/api/Imgcolor?img=
     # Storage / 缓存时间
@@ -497,7 +497,7 @@ rightside:
 footer:
   # 社交图标
   information:
-    author: img/logo.png
+    author: /solitude-demo/img/logo.png
     left:
       Github: https://github.com/everfu || fab fa-github # 名称: 链接 || 图标
       Bsky: https://bsky.app/profile/efu.me || fab fa-bluesky
@@ -569,7 +569,7 @@ meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth
 # Capsule music
 # 音乐胶囊
 capsule:
-  enable: false
+  enable: true
   # 歌单 ID / 单曲 ID
   id: 8407304077
   # 服务商：netease / qq / xiami / kugou / baidu
@@ -844,7 +844,7 @@ search:
     #   per_page: 6
   local:
     preload: false
-    CDN: # url: search.xml
+    CDN: /solitude-demo/search.xml
   docsearch:
     appId: "KNSYWJA80Y"
     apiKey: "64cec8b7ed869453640daca02f5911fc"
