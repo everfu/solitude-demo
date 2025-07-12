@@ -6,8 +6,8 @@
 site:
   name:
     class: text # text / i_class / img
-    custom: 伍拾柒 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
-  icon: https://cdn.lightxi.com/cloudreve/uploads/2025/02/14/yY8tgUJU_891fe376065dc8b9eacecfde3b6b6e8f.jpg # Site icon / 网站图标
+    custom: Solitude # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+  icon: /img/logo.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -17,8 +17,8 @@ nav:
   # Left Box
   # 左侧盒子
   group:
-  #  project: # name
-  #    Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.ico # name: url || icon
+    项目:
+      Solitude: https://github.com/everfu/hexo-theme-solitude || img/logo.png # name: url || icon
 
   # Menu
   # 菜单
@@ -72,14 +72,14 @@ hometop:
         icon: "fab fa-git"
         color: "#df5b40"
   group:
-    # 热门: /tags/Fire/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
+    # 热门: /tags/Hexo/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
   recommendList:
-    enable: false
+    enable: true
     sup: 置顶
     title: Solitude 官方文档
-    url: https://solitude.js.org/
-    img: /img/default.avif
-    color: "none"
+    url: https://solitude.js.org
+    img: img/default.avif
+    color: "var(--efu-main)"
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -497,7 +497,7 @@ rightside:
 footer:
   # 社交图标
   information:
-    author: /img/logo.png
+    author: img/logo.png
     left:
       Github: https://github.com/everfu || fab fa-github # 名称: 链接 || 图标
       Bsky: https://bsky.app/profile/efu.me || fab fa-bluesky
@@ -515,12 +515,12 @@ footer:
     协议:
       Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0.html
     友链:
-      伍十七: https://www.efu.me/
+      伍拾柒: https://www.efu.me/
       张洪Heo: https://zhheo.com/
       亦小封: https://meuicat.com/
 
   # 随机友链
-  randomlink: false # 随机友链
+  randomlink: true # 随机友链
 
   # 备案
   beian:
@@ -535,13 +535,13 @@ footer:
   links:
     - name: 订阅
       url: /atom.xml
-    # - name: License
-    #   url: https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE
-    #   icon:
-    #     - fas fa-copyright
-    #     - fab fa-creative-commons-by
-    #     - fab fa-creative-commons-nc
-    #     - fab fa-creative-commons-nd
+    - name: License
+      url: https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE
+      icon:
+        - fas fa-copyright
+        - fab fa-creative-commons-by
+        - fab fa-creative-commons-nc
+        - fab fa-creative-commons-nd
     # - name: boringbay
     #   url: https://boringbay.com/
     #   img: https://boringbay.com/api/badge/www.efu.me
