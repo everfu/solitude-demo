@@ -1,8 +1,8 @@
-https://everfu.github.io/solitude-demo/music/index.html
-https://everfu.github.io/solitude-demo/tags/index.html
 https://everfu.github.io/solitude-demo/about/index.html
 https://everfu.github.io/solitude-demo/kit/index.html
 https://everfu.github.io/solitude-demo/links/index.html
+https://everfu.github.io/solitude-demo/music/index.html
+https://everfu.github.io/solitude-demo/tags/index.html
 https://everfu.github.io/solitude-demo/posts/874ddadb.html
 https://everfu.github.io/solitude-demo/posts/f86654a0.html
 https://everfu.github.io/solitude-demo/posts/c63b9f20.html
