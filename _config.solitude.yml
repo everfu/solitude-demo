@@ -334,16 +334,6 @@ font:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
-# Background
-# 背景图片
-background:
-  enable: false
-  opacity: .13
-  dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
-  light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
-# --------------------------- end ---------------------------
-
-# --------------------------- start ---------------------------
 # Lure
 # When the user exits the page, modify the title
 # 当用户退出页面时，修改标题
@@ -779,7 +769,7 @@ comment:
   # PV
   pv: true
   # Avatar
-  avatar: https://weavatar.com/avatar/
+  avatar: https://weavatar.com
   # Hot comment tips
   # 热评提示
   hot_tip:
@@ -810,7 +800,7 @@ valine:
   appKey: nKcAGPsR1ydwQjEFZcMFNGJG # leancloud application app key
   serverURLs: https://luywcy5g.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   avatar: https://weavatar.com/avatar/ # https://valine.js.org/avatar.html
-  visitor: false
+  visitor: true
   style: true # Use custom styles when turned on
   option: # options list
 # Artalk: https://solitude.js.org/comment/artalk
@@ -944,9 +934,9 @@ google_adsense:
 # 非必要请勿修改
 CDN:
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
-  third_party: custom # cdnjs / jsdelivr / unpkg / custom
+  third_party: jsdelivr # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
-  custom_format: //mirrors.sustech.edu.cn/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file} # 自定义格式
+  custom_format: https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   # 直接覆盖默认 CDN 链接（优先级最高）
   options:
     # algolia_search
