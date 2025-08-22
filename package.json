@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@renbaoshuo/markdown-it-katex": "^2.0.2",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.1.2",
     "compress": "^0.99.0",
-    "gulp": "^5.0.0",
+    "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-html-minifier-terser": "^7.1.0",
     "gulp-htmlclean": "^2.7.22",
@@ -38,10 +38,10 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-solitude-tag": "^1.0.22",
-    "hexo-theme-solitude": "^3.0.18",
+    "hexo-theme-solitude": "^3.0.20",
     "hexo-util": "^3.3.0",
     "hexo-wordcount": "^6.0.1",
-    "katex": "^0.16.21",
+    "katex": "^0.16.22",
     "moment": "^2.30.1"
   },
   "packageManager": "pnpm@10.12.4"
