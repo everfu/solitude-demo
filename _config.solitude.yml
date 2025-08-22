@@ -595,13 +595,13 @@ keyboard:
 # Lazyload
 # 图片懒加载
 lazyload:
-  enable: false
+  enable: true
   # post, site
   field: site
   # 加载时替换图
   placeholder: ""
   # 加载失败替换图
-  errorimg: /img/error_load.avif
+  errorimg: /solitude-demo/img/error_load.avif
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -753,7 +753,7 @@ pwa:
 comment:
   # Which commenting system to use(e.g. waline or waline,twikoo)
   # 使用哪个评论系统（例如： waline or waline,twikoo）
-  use: valine # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
+  use: valine,giscus # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
   commentBarrage: true
@@ -811,13 +811,15 @@ artalk:
   option: # options
 # Giscus: https://solitude.js.org/comment/giscus
 giscus:
-  repo: # GitHub repository name
-  repo_id: # GitHub repository ID
-  category_id: # GitHub repository category ID
+  repo: 'everfu/solitude-demo' # GitHub repository name
+  repo_id: 'R_kgDOPEVUMQ' # GitHub repository ID
+  category_id: 'DIC_kwDOPEVUMc4CueyU' # GitHub repository category ID
   theme:
     light: light
     dark: dark
   option:
+    'data-mapping': 'og:title'
+    'data-lang': 'zh-CN'
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
