@@ -124,7 +124,7 @@ function cardTimes() {
     lunarMon = chineseLunar.format(lunarDate, "M");
     lunarDay = chineseLunar.format(lunarDate, "d");
 
-    const newYearDate = new Date("2026/02/17 00:00:00");
+    const newYearDate = new Date("2027/02/06 00:00:00");
     const daysUntilNewYear = Math.floor(
       (newYearDate - now) / 1e3 / 60 / 60 / 24
     );

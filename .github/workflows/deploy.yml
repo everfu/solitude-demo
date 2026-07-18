@@ -13,20 +13,21 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Install dependencies
         run: |
-          npm install -g hexo-cli gulp
-          npm install
+          corepack enable
+          corepack prepare pnpm@10.12.4 --activate
+          pnpm install --frozen-lockfile
 
       - name: Build Hexo site
         run: |
-          hexo clean
-          hexo g
-          gulp
+          pnpm clean
+          pnpm build
+          pnpm exec gulp
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -3,7 +3,7 @@
 # --------------------------- start ---------------------------
 # Site information
 # 网站信息
-site:
+site: &v4_site
   name:
     class: text # text / i_class / img
     custom: Solitude # Solitude / fas fa-ghost / /img/pwa/favicon.ico
@@ -13,7 +13,7 @@ site:
 # --------------------------- start ---------------------------
 # Navigation bar
 # 导航栏
-nav:
+nav: &v4_nav
   # Left Box
   # 左侧盒子
   group:
@@ -50,7 +50,7 @@ nav:
 # --------------------------- start ---------------------------
 # Home Top Banner
 # 首页顶部
-hometop:
+hometop: &v4_hometop
   enable: true
   banner:
     title: 分享技术<br >与科技生活
@@ -85,7 +85,7 @@ hometop:
 # --------------------------- start ---------------------------
 # Aside
 # 侧边栏
-aside:
+aside: &v4_aside
   # Values: about (info card), newestPost (latest article), allInfo (website information), newest_comment (latest comment)
   # 值: about(信息卡), newestPost(最新文章), allInfo(网站信息), newest_comment(最新评论)
 
@@ -108,8 +108,8 @@ aside:
   # 信息卡
   my_card:
     author:
-      img: https://cdn.lightxi.com/cloudreve/uploads/2025/02/14/yY8tgUJU_891fe376065dc8b9eacecfde3b6b6e8f.jpg
-      sticker: https://s3.qjqq.cn/47/67eb5b00cf179.png!color # url, 24x24 size
+      img: https://github.com/everfu.png
+      sticker: # url, 24x24 size
     description: 只有迎风，风筝才能飞得更高。
     # 内容 / Content
     content: 这是一个普通的程序员，但有一个不平凡的梦想，希望能够改变世界。
@@ -179,7 +179,7 @@ aside:
 # --------------------------- start ---------------------------
 # Page default settings
 # 页面默认设置
-page:
+page: &v4_page
   # 404 page
   # 404 页面
   error: true
@@ -192,6 +192,9 @@ page:
   # list: Sort List / 1: Follow HomeList
   # list: 排序列表 / 1: 跟随首页列表
   archives: 0
+  # 友链总数超过此值时通过 JSON 异步加载
+  links:
+    async_threshold: 200
   # Default value
   # 默认值
   default:
@@ -204,7 +207,7 @@ page:
 # --------------------------- start ---------------------------
 # Post default settings
 # 文章默认设置
-post:
+post: &v4_post
   default:
     # Default image when no cover is set
     # 未设置封面时的默认图片
@@ -302,15 +305,18 @@ post:
 
 # --------------------------- start ---------------------------
 # Custom Theme Color
-theme_color:
+theme_color: &v4_theme_color
   dark: "#3498db" # 深蓝色
   light: "#f1c40f" # 阳光黄
+  nav_hover_text:
+    dark: "#1b1c20" # 深色模式导航栏悬停文字
+    light: "#363636" # 浅色模式导航栏悬停文字
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # display mode
 # 显示模式
-display_mode:
+display_mode: &v4_display_mode
   # auto: automatic switching(Recognize the current theme mode of the device) / dark: dark mode / light: light mode
   # auto: 自动切换（识别设备当前主题模式） / dark: 深色模式 / light: 浅色模式
   type: auto
@@ -322,7 +328,7 @@ display_mode:
 # --------------------------- start ---------------------------
 # Font
 # 字体
-font:
+font: &v4_font
   font-size: 16px
   code-font-size: 16px
   # Global font
@@ -337,7 +343,7 @@ font:
 # Lure
 # When the user exits the page, modify the title
 # 当用户退出页面时，修改标题
-lure:
+lure: &v4_lure
   enable: false
   jump: 404 Not Found
   back: ヾ(≧∇≦*)ゝHey, hey, you fell for it.
@@ -346,7 +352,7 @@ lure:
 # --------------------------- start ---------------------------
 # Article expiration
 # 文章过期
-expire:
+expire: &v4_expire
   enable: false
   time: 30 # days
   position: top # top / bottom
@@ -357,7 +363,7 @@ expire:
 # --------------------------- start ---------------------------
 # Home page article configuration information
 # 首页文章配置信息
-index_post_list:
+index_post_list: &v4_index_post_list
   direction: column # row / column
   column: 2 # 2: 2 columns 3: 3 columns
   cover: both
@@ -366,7 +372,7 @@ index_post_list:
 # --------------------------- start ---------------------------
 # Related articles
 # 相关文章
-related_post:
+related_post: &v4_related_post
   enable: false
   limit: 2
   # created: release date / updated: update date
@@ -377,7 +383,7 @@ related_post:
 # --------------------------- start ---------------------------
 # Custom right menu
 # 自定义右键菜单
-right_menu:
+right_menu: &v4_right_menu
   enable: false
   # Whether to display the hot comment switch.
   # 是否显示热门评论开关
@@ -412,7 +418,7 @@ right_menu:
 # Copy
 #  information
 # 复制信息
-copy:
+copy: &v4_copy
   enable: true
   # Turn on Link copyright information after copying.
   # 复制后链接版权信息
@@ -425,17 +431,17 @@ copy:
 
 # --------------------------- start ---------------------------
 # Mermaid
-mermaid: false
+mermaid: &v4_mermaid false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Chart.js
-chart: true
+chart: &v4_chart true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # typeit
-typeit: true
+typeit: &v4_typeit true
 # --------------------------- end ---------------------------
 
 ### Extended configuration
@@ -443,7 +449,7 @@ typeit: true
 # --------------------------- start ---------------------------
 # Console
 # 控制台
-console:
+console: &v4_console
   enable: true
   # Recent comments
   # 最新评论
@@ -462,7 +468,7 @@ console:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
-translate:
+translate: &v4_translate
   enable: true
   defaultEncoding: 2 # 1: 默认繁体 2: 默认简体
   translateDelay: 0 # 首次加载翻译迟疑时间
@@ -471,7 +477,7 @@ translate:
 # --------------------------- start ---------------------------
 # Right-Sidebar
 # 右下角悬停导航栏
-rightside:
+rightside: &v4_rightside
   enable: true
   percent: true
   hide:
@@ -484,7 +490,7 @@ rightside:
 # --------------------------- start ---------------------------
 # Footer
 # 页脚
-footer:
+footer: &v4_footer
   # 社交图标
   information:
     author: /solitude-demo/img/logo.png
@@ -540,7 +546,7 @@ footer:
 # --------------------------- start ---------------------------
 # 404 page
 # 404 页面
-errorpage:
+errorpage: &v4_errorpage
   img: /img/404.avif
   text: =awa= Page Not Found # Text
   recommendList: true
@@ -552,13 +558,13 @@ errorpage:
 # can only use NetEase Cloud Music, QQ Music and other music platforms supported by the mainland China region,
 # the subsequent consideration of the use of JSON files to store music information and customize the implementation of the third-party API does not depend on the page.
 # Music Page
-meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
+meting_api: &v4_meting_api "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r" # Custom API
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Capsule music
 # 音乐胶囊
-capsule:
+capsule: &v4_capsule
   enable: true
   # 歌单 ID / 单曲 ID
   id: 8407304077
@@ -574,7 +580,7 @@ capsule:
 # Open with shift + ?
 # 快捷菜单
 # 使用 shift + ? 打开
-keyboard:
+keyboard: &v4_keyboard
   enable: false
   list:
     # - name: 关闭快捷菜单
@@ -594,7 +600,7 @@ keyboard:
 # --------------------------- start ---------------------------
 # Lazyload
 # 图片懒加载
-lazyload:
+lazyload: &v4_lazyload
   enable: true
   # post, site
   field: site
@@ -607,7 +613,7 @@ lazyload:
 # --------------------------- start ---------------------------
 # Loading
 # 加载
-loading:
+loading: &v4_loading
   # Full screen loading
   # 全屏加载
   fullpage: false
@@ -622,7 +628,7 @@ loading:
 # --------------------------- start ---------------------------
 # Highlight
 # 代码块高亮
-highlight:
+highlight: &v4_highlight
   enable: true
   # Display the fold button when the number of words exceeds
   # 当超过多少字时显示折叠按钮
@@ -643,18 +649,18 @@ highlight:
 # --------------------------- start ---------------------------
 # Lightbox
 # 图片灯箱
-lightbox: true
+lightbox: &v4_lightbox true
 # warning: Please select any one, but cannot be turned on at the same time.
 # 警告: 请任选其一，但不能同时开启。
-fancybox: true # fancybox
-mediumZoom: false # mediumZoom
+fancybox: &v4_fancybox true # fancybox
+mediumZoom: &v4_medium_zoom false # mediumZoom
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Memorial
 # Turn the entire site gray on memorable days.
 # 在纪念日整个网站变灰
-memorial:
+memorial: &v4_memorial
   enable: false
   date:
   #  - 7-7
@@ -664,7 +670,7 @@ memorial:
 
 # --------------------------- start ---------------------------
 # OpenGraph
-OpenGraph:
+OpenGraph: &v4_open_graph
   enable: true
   options:
     # twitter_card:
@@ -681,14 +687,14 @@ OpenGraph:
 # 字数统计
 # warning: Please install the hexo-wordcount plugin first.
 # 警告: 请先安装 hexo-wordcount 插件。
-wordcount: true
+wordcount: &v4_wordcount true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Katex
 # Latex formula support
 # Latex 公式支持
-katex:
+katex: &v4_katex
   enable: true
   # Whether to load on each page
   # 是否在每个页面加载
@@ -701,7 +707,7 @@ katex:
 # --------------------------- start ---------------------------
 # verification
 # 验证
-verify_site:
+verify_site: &v4_verify_site
   # - name: google-site-verification
   #   content: xxxxxx
   # - name: baidu-site-verification
@@ -719,7 +725,7 @@ css_prefix: false
 # --------------------------- start ---------------------------
 # Extend
 # 扩展
-extends:
+extends: &v4_extends
   # Insert in head
   # 插入到 head
   head:
@@ -736,7 +742,7 @@ extends:
 # --------------------------- start ---------------------------
 # PWA
 # Progressive Web App
-pwa:
+pwa: &v4_pwa
   enable: false
   manifest: /manifest.json # manifest.json
   theme_color: "#006a73" # Theme color
@@ -750,7 +756,7 @@ pwa:
 # --------------------------- start ---------------------------
 # Comment
 # 评论
-comment:
+comment: &v4_comment
   # Which commenting system to use(e.g. waline or waline,twikoo)
   # 使用哪个评论系统（例如： waline or waline,twikoo）
   use: valine,giscus # waline, twikoo, valine, artalk, giscus # Up to two comment systems can be turned on at the same time
@@ -783,19 +789,19 @@ comment:
     storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/comment/twikoo
-twikoo: # https://twikoo.js.org/
+twikoo: &v4_twikoo # https://twikoo.js.org/
   envId: # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: # AccessToken
   option: # twikoo option
 # Waline: https://solitude.js.org/comment/waline
-waline: # https://waline.js.org/
+waline: &v4_waline # https://waline.js.org/
   envId: # url: https://waline.wzsco.top
   pageview: false # Whether to enable page access statistics
   option: # waline configuration item
 # Valine: https://solitude.js.org/comment/valine
-valine:
+valine: &v4_valine
   appId: lUYWcy5GblLUZOCvcSdDiLP9-gzGzoHsz # leancloud application app id
   appKey: nKcAGPsR1ydwQjEFZcMFNGJG # leancloud application app key
   serverURLs: https://luywcy5g.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
@@ -805,12 +811,12 @@ valine:
   option: # options list
 # Artalk: https://solitude.js.org/comment/artalk
 # Artalk: https://solitude.js.org/zh/comment/artalk
-artalk:
+artalk: &v4_artalk
   server: # server url
   site: # site name
   option: # options
 # Giscus: https://solitude.js.org/comment/giscus
-giscus:
+giscus: &v4_giscus
   repo: 'everfu/solitude-demo' # GitHub repository name
   repo_id: 'R_kgDOPEVUMQ' # GitHub repository ID
   category_id: 'DIC_kwDOPEVUMc4CueyU' # GitHub repository category ID
@@ -824,13 +830,20 @@ giscus:
 
 # --------------------------- start ---------------------------
 # Search
-search:
+search: &v4_search
   enable: true
   # type: 使用的搜索引擎 / search engine
   type: local # local / algolia
   tags:
-    # - Solitude
-    # - Hexo
+    - 热门
+    - Hexo
+    - Swift
+    - Sketch
+    - 设计
+    - 教程
+  ai:
+    enable: true
+    url: https://ai.zhheo.com/
   algolia:
     # hits:
     #   per_page: 6
@@ -847,7 +860,7 @@ search:
 # --------------------------- start ---------------------------
 # Music Page
 # 音乐馆
-music:
+music: &v4_music
   enable: true
   # 歌单 ID / 单曲 ID
   id: 5144842535
@@ -866,7 +879,7 @@ music:
 # --------------------------- start ---------------------------
 # Danmaku Page
 # 弹幕留言页面
-envelope:
+envelope: &v4_envelope
   enable: false
   line: 10 # 显示行数
   speed: 20 # 播放速度
@@ -878,7 +891,7 @@ envelope:
 # --------------------------- start ---------------------------
 # Brevity Page
 # 即可短文
-brevity:
+brevity: &v4_brevity
   enable: false
   home_mini: false
   music: false
@@ -890,7 +903,7 @@ brevity:
 # --------------------------- start ---------------------------
 # Recent comments Page
 # 最近评论页面
-recent_comments:
+recent_comments: &v4_recent_comments
   enable: false
   limit: 50 # ⚠️waline 仅支持最大50条评论 / ⚠️waline only supports a maximum of 50 comments
   cache: 0.2 # 1 = 1天 / 1 = 1 day
@@ -899,7 +912,7 @@ recent_comments:
 
 # --------------------------- start ---------------------------
 # Busuanzi
-busuanzi: false
+busuanzi: &v4_busuanzi false
 # 0: Original / 1: Custom
 # 0: 原版 / 1: 自定义版
 busuanzi_use: 0
@@ -908,7 +921,7 @@ busuanzi_use: 0
 # --------------------------- start ---------------------------
 # Google Adsense
 # 谷歌广告
-google_adsense:
+google_adsense: &v4_google_adsense
   enable: false
   # Auto ads
   # 自动广告
@@ -934,7 +947,7 @@ google_adsense:
 
 # --------------------------- start ---------------------------
 # 非必要请勿修改
-CDN:
+CDN: &v4_cdn
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
   third_party: jsdelivr # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
@@ -972,3 +985,80 @@ CDN:
     # waline_css
     # waline_js
 # --------------------------- end ---------------------------
+
+# Solitude 4 public configuration view. The anchors above preserve the demo's
+# historical values while the theme consumes the grouped 4.0 contract below.
+config_version: 4
+
+navigation:
+  <<: *v4_nav
+  rightside: *v4_rightside
+  context_menu: *v4_right_menu
+  keyboard: *v4_keyboard
+  console: *v4_console
+
+home:
+  hero: *v4_hometop
+  posts: *v4_index_post_list
+
+sidebar: *v4_aside
+
+article:
+  defaults: *v4_post
+  related: *v4_related_post
+  copy: *v4_copy
+  expiration: *v4_expire
+  highlight: *v4_highlight
+  katex: *v4_katex
+  mermaid: *v4_mermaid
+  chart: *v4_chart
+  typeit: *v4_typeit
+  lightbox:
+    enable: *v4_lightbox
+    provider: fancybox
+
+pages:
+  defaults: *v4_page
+  error: *v4_errorpage
+  brevity: *v4_brevity
+  recent_comments: *v4_recent_comments
+  message: *v4_envelope
+  music: *v4_music
+
+appearance:
+  colors: *v4_theme_color
+  mode: *v4_display_mode
+  font: *v4_font
+  loading: *v4_loading
+  memorial: *v4_memorial
+
+features:
+  lazyload: *v4_lazyload
+  translation: *v4_translate
+  lure: *v4_lure
+  wordcount: *v4_wordcount
+  busuanzi:
+    enable: *v4_busuanzi
+    provider: official
+  pwa: *v4_pwa
+  open_graph: *v4_open_graph
+
+integrations:
+  comments:
+    <<: *v4_comment
+    providers:
+      twikoo: *v4_twikoo
+      waline: *v4_waline
+      valine: *v4_valine
+      artalk: *v4_artalk
+      giscus: *v4_giscus
+  search: *v4_search
+  capsule: *v4_capsule
+  meting_api: *v4_meting_api
+  ads: *v4_google_adsense
+  verification: *v4_verify_site
+
+assets:
+  cdn: *v4_cdn
+
+extensions: *v4_extends

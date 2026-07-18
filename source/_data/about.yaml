@@ -46,7 +46,7 @@ skills: # Add as needed
 careers:
   title: 生涯
   subtitle: 无限进步
-  image: https://s3.qjqq.cn/47/67a216483c354.png!color
+  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
   items:
     - color: "#357ef5"
       school: 软件工程
@@ -76,46 +76,46 @@ cause:
     <br>
 
 # comic 和 like-technology 二选一 你全要也可以
-# likes:
-#   - type: "comic"
-#     tips: 爱好番剧 # 右上角提示
-#     title: 追番 # 标题
-#     subtips: "科幻、动漫、喜剧" # 左下小字，可不要
-#     list: # 最好就是五个或以上，相信你们肯定没那么少的。
-#       - name: 你的名字 # 动漫或影视名
-#         href: https://movie.douban.com/subject/26683290/ # B站或豆瓣某个位置
-#         cover: https://images.418121.xyz/file/blog/covers/p2910701461.webp # 封面图
-#       - name: 四月是你的谎言
-#         href: https://www.bilibili.com/bangumi/media/md1699
-#         cover: https://images.418121.xyz/file/blog/covers/p2232343678.webp
-#       - name: 流浪地球2
-#         href: https://movie.douban.com/subject/35267208/
-#         cover: https://images.418121.xyz/file/blog/covers/p2886653882.webp
-#       - name: 花束般的恋爱
-#         href: https://movie.douban.com/subject/34874432/
-#         cover: https://images.418121.xyz/file/blog/covers/p2868462052.webp
-#       - name: 天气之子
-#         href: https://movie.douban.com/subject/30402296/
-#         cover: https://images.418121.xyz/file/blog/covers/p2558022335.webp
-#     button: false # false 可以关闭右边按钮
-#     button_link: "/pyq/" # 跳转路径
-#     button_text: "观看记录" # 按钮文字
-# - type: "like-technology"
-#   bg: "https://images.418121.xyz/file/blog/page/movie.webp"
-#   tips: "与她一起看"
-#   title: "影视偏好"
-#   subtips: "科幻、动漫、喜剧"
-#   button: true
-#   button_link: "/pyq/"
-#   button_text: "观看记录"
-# - type: "like-music"
-#   bg: "https://images.418121.xyz/file/blog/page/yy.webp"
-#   tips: "粤语、流行"
-#   title: "私人歌单"
-#   subtips: "账号密码：ymx"
-#   button: true
-#   button_link: "https://music.418121.xyz/app/#/login/"
-#   button_text: "音乐库"
+likes:
+  - type: "comic"
+    tips: 爱好番剧 # 右上角提示
+    title: 追番 # 标题
+    subtips: "科幻、动漫、喜剧" # 左下小字，可不要
+    list: # 最好就是五个或以上，相信你们肯定没那么少的。
+      - name: 你的名字 # 动漫或影视名
+        href: https://movie.douban.com/subject/26683290/ # B站或豆瓣某个位置
+        cover: https://images.418121.xyz/file/blog/covers/p2910701461.webp # 封面图
+      - name: 四月是你的谎言
+        href: https://www.bilibili.com/bangumi/media/md1699
+        cover: https://images.418121.xyz/file/blog/covers/p2232343678.webp
+      - name: 流浪地球2
+        href: https://movie.douban.com/subject/35267208/
+        cover: https://images.418121.xyz/file/blog/covers/p2886653882.webp
+      - name: 花束般的恋爱
+        href: https://movie.douban.com/subject/34874432/
+        cover: https://images.418121.xyz/file/blog/covers/p2868462052.webp
+      - name: 天气之子
+        href: https://movie.douban.com/subject/30402296/
+        cover: https://images.418121.xyz/file/blog/covers/p2558022335.webp
+    button: false # false 可以关闭右边按钮
+    button_link: "/pyq/" # 跳转路径
+    button_text: "观看记录" # 按钮文字
+  - type: "like-technology"
+    bg: "https://images.418121.xyz/file/blog/page/movie.webp"
+    tips: "与她一起看"
+    title: "影视偏好"
+    subtips: "科幻、动漫、喜剧"
+    button: true
+    button_link: "/pyq/"
+    button_text: "观看记录"
+  - type: "like-music"
+    bg: "https://images.418121.xyz/file/blog/page/yy.webp"
+    tips: "粤语、流行"
+    title: "私人歌单"
+    subtips: "账号密码：ymx"
+    button: true
+    button_link: "https://music.418121.xyz/app/#/login/"
+    button_text: "音乐库"
 
 award:
   enable: true
@@ -170,15 +170,30 @@ rewardList: # Bottom donations
 
 game:
   - title: 游戏爱好
-    img: https://7.isyangs.cn/66/6738b3614140c-66.webp
+    img: https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg
     subtitle: 英雄联盟
     box_shadow: "0 -69px 203px 11px #04120f inset"
-    icon_group:
-      - https://7.isyangs.cn/66/6738b472ce11f-66.webp
-      - https://7.isyangs.cn/66/6738b48045a5b-66.webp
-    tips_right: 比尔吉沃特
+    mode:
+      name: 大乱斗
+      tip: 极地大乱斗模式
+      img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/map/map12.png
+    heroes:
+      - name: 老鼠
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/Twitch.png
+      - name: 妮蔻
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/Neeko.png
+      - name: 慧
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/Hwei.png
+      - name: 梅尔
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/Mel.png
+      - name: 小火龙
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/Smolder.png
+      - name: 龙王
+        img: https://ddragon.leagueoflegends.com/cdn/16.14.1/img/champion/AurelionSol.png
+    tips_right: 联盟四区
+    tips_right_tip: 跨区匹配支持 比尔吉沃特 弗雷尔卓德 扭曲丛林
   - title: 游戏爱好
-    img: https://7.isyangs.cn/66/6738b3618ee12-66.webp
+    img: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=1600&q=80"
     subtitle: 狼人杀
     box_shadow: "0 -69px 203px 11px #415dc9 inset"
     tips_left: ID 1333E3FF
