@@ -38,9 +38,9 @@
     <category term="实用教程" scheme="https://everfu.github.io/solitude-demo/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="PHP" scheme="https://everfu.github.io/solitude-demo/tags/PHP/"/>
-    
     <category term="Hexo" scheme="https://everfu.github.io/solitude-demo/tags/Hexo/"/>
+    
+    <category term="PHP" scheme="https://everfu.github.io/solitude-demo/tags/PHP/"/>
     
   </entry>
   

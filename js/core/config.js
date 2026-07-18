@@ -1,0 +1,1 @@
+const parseConfig=(t,n={})=>{const e=document.getElementById(t);if(!e)return n;try{return JSON.parse(e.content?.textContent||e.textContent||"{}")}catch(e){return console.error(`Invalid Solitude configuration in #${t}:`,e),n}};export const getConfig=()=>parseConfig("site-config");export const getPageConfig=()=>parseConfig("config-diff");
