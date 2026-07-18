@@ -1,0 +1,3 @@
+[submodule "themes/solitude"]
+	path = themes/solitude
+	url = https://github.com/everfu/hexo-theme-solitude.git
