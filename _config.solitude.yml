@@ -40,11 +40,6 @@ nav: &v4_nav
   right:
     random: true # Random article / 随机文章按钮
     custom:
-      - name: 开往 # 名字
-        url: https://www.travellings.cn/go.html # 跳转链接
-        icon: fas fa-train # 图标
-        onclick: # 点击事件
-        id: travellings_button # id
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -73,13 +68,6 @@ hometop: &v4_hometop
         color: "#df5b40"
   group:
     # 热门: /tags/Hexo/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
-  recommendList:
-    enable: true
-    sup: 置顶
-    title: Solitude 官方文档
-    url: https://solitude.js.org
-    img: img/default.avif
-    color: "var(--efu-main)"
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -479,7 +467,6 @@ translate: &v4_translate
 # 右下角悬停导航栏
 rightside: &v4_rightside
   enable: true
-  percent: true
   hide:
     enable: true
     translate: true
