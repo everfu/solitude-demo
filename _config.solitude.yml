@@ -717,6 +717,7 @@ extends: &v4_extends
   # 插入到 head
   head:
     - <link rel="stylesheet" href="https://everfu.github.io/solitude-demo/css/schedule.css">
+    - <link rel="stylesheet" href="/css/rightside.css">
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
 
   # Insert in body
