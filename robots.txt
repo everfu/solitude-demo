@@ -7,4 +7,4 @@ Disallow: /images/
 
 Allow: /
 
-Sitemap: https://solitude.js.org/sitemap.xml
+Sitemap: https://solitude.efu.me/sitemap.xml
