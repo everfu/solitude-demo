@@ -1,78 +1,73 @@
-title: 关于本站
+title: 关于 Solitude
 
 contentinfo: # Top personal information display
-  sup: 你好，很高兴认识你👋
-  name: 我是伍十七 # Name
-  title: 学生, 软件工程师, 独立开发者, 博主 # Introduction
-  tip: 追求卓越
-  slogan: 创造源于激情
+  sup: 你好，欢迎来到演示站 👋
+  name: 这里是 Solitude # Name
+  title: Hexo 主题, 配置示例, 使用教程, 设计实践 # Introduction
+  tip: 简洁与丰富并存
+  slogan: 让内容自然成为主角
   mask:
-    - 卓越产品
-    - 卓越设计
-    - 高效编程
-    - 用户友好体验
+    - 清晰的信息层级
+    - 舒适的阅读体验
+    - 丰富的页面组件
+    - 持续维护与改进
 
 skills: # Add as needed
-  title: 技能
-  subtitle: 解锁创造力
+  title: 主题技术
+  subtitle: 从内容生成到页面呈现
   tags:
     - title: HTML
       # img: https://skillicons.dev/icons?i=html
       icon: fab fa-html5
       color: "#e9572b"
-    - title: Javascript
+    - title: JavaScript
       # img: https://skillicons.dev/icons?i=javascript
       icon: fab fa-js
       color: "#f7cb4f"
-    - title: Kotlin
-      img: https://skillicons.dev/icons?i=kotlin
-      icon: fab fa-kotlin
-      icon_color: "#69a5ff"
-      color: "#ffffff"
-    - title: WebPack
-      img: https://skillicons.dev/icons?i=webpack
-      icon: fab fa-webpack
-      icon_color: "#f7cb4f"
-      color: "#2e3a41"
+    - title: Pug
+      icon: fas fa-code
+      color: "#a86454"
+    - title: Stylus
+      icon: fas fa-palette
+      color: "#ff6347"
     - title: Git
       # img: https://skillicons.dev/icons?i=git
       icon: fab fa-git
       color: "#df5b40"
-    - title: Docker
-      # img: https://skillicons.dev/icons?i=docker
-      icon: fab fa-docker
-      color: "#57b6e6"
+    - title: Node.js
+      icon: fab fa-node-js
+      color: "#68a063"
 
 careers:
-  title: 生涯
-  subtitle: 无限进步
+  title: 项目历程
+  subtitle: 在持续迭代中打磨体验
   image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
   items:
     - color: "#357ef5"
-      school: 软件工程
-      major: 学习
+      school: Solitude
+      major: 开源 Hexo 主题
 
 motto:
   title: 座右铭
-  prefix: 破釜沉舟，
-  content: 勇往直前。
+  prefix: 保持克制，
+  content: 认真表达。
 
 expertise:
-  title: 专长
-  prefix: 数学, 物理, 化学
-  specialist: 专家
-  content: 学习能力
+  title: 设计重点
+  prefix: 内容, 交互, 性能
+  specialist: 持续优化
+  content: 博客体验
   level: MAX
 
 cause:
   tip: 初衷
   title: 为什么建立这个网站？
   content:
-    <br>创建这个网站的初衷是有一个地方可以 <b>积累知识和兴趣</b>。与他人分享可以让这些成为积累和沉淀。如果我能帮助更多的人并解决他们的问题，那就太好了。
+    <br>这个网站是 Solitude 的在线演示，也是一个可直接参考的 <b>配置与内容样例</b>。你可以在这里了解主题的首页、文章、友链、装备、音乐和关于页如何协同工作。
     <br>
-    与大多数垂直技术博客不同，这里的类别将非常多样，包括 <b>教程和实用知识</b>、<b>生活轶事和建议</b>、<b>各种主题的思考和想法</b>。无论我研究或发现什么，我都会在这里分享。
+    站内教程聚焦 <b>真实的使用场景</b>：从外挂标签、侧边栏组件到第三方插件样式，尽量说明需要修改的位置、配置方式与最终效果。
     <br>
-    这是创建这个小网站的初衷，也是 <b>我分享生活的方式</b>。我很幸运在这里遇见你，我相信我们可以一起留下一些美好的回忆。
+    如果这里的示例能让你的博客搭建过程更顺畅，这个演示站就完成了它最重要的使命。
     <br>
 
 # comic 和 like-technology 二选一 你全要也可以
